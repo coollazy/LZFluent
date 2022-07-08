@@ -1,0 +1,16 @@
+PODS:
+  - LZFluent (1.0.0)
+
+DEPENDENCIES:
+  - LZFluent (from `../`)
+
+EXTERNAL SOURCES:
+  LZFluent:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LZFluent: f54ec0f63bdf8ba1edd2dd07c638a9fe1e18d899
+
+PODFILE CHECKSUM: aba08821406f563f6345baf5737afc5339d386e5
+
+COCOAPODS: 1.9.3
