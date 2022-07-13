@@ -1,47 +1,47 @@
 import UIKit
 
 extension UILabel {
-    @discardableResult func setText(_ text: String) -> Self {
+    @discardableResult public func setText(_ text: String) -> Self {
         self.text = text
         return self
     }
     
-    @discardableResult func setAttributedText(_ text: NSAttributedString?) -> Self {
+    @discardableResult public func setAttributedText(_ text: NSAttributedString?) -> Self {
         attributedText = text
         return self
     }
     
-    @discardableResult func setTextColor(_ color: UIColor) -> Self {
+    @discardableResult public func setTextColor(_ color: UIColor) -> Self {
         textColor = color
         return self
     }
     
-    @discardableResult func setFontSize(_ size: CGFloat) -> Self {
+    @discardableResult public func setFontSize(_ size: CGFloat) -> Self {
         font = UIFont.systemFont(ofSize: size)
         return self
     }
     
-    @discardableResult func setFontWeight(_ weight: UIFont.Weight) -> Self {
+    @discardableResult public func setFontWeight(_ weight: UIFont.Weight) -> Self {
         font = UIFont.systemFont(ofSize: font.pointSize, weight: weight)
         return self
     }
     
-    @discardableResult func setNumberOfLines(_ lines: Int) -> Self {
+    @discardableResult public func setNumberOfLines(_ lines: Int) -> Self {
         numberOfLines = lines
         return self
     }
     
-    @discardableResult func setTextAlignment(_ alignment: NSTextAlignment) -> Self {
+    @discardableResult public func setTextAlignment(_ alignment: NSTextAlignment) -> Self {
         textAlignment = alignment
         return self
     }
     
-    @discardableResult func setLineBreakMode(_ mode: NSLineBreakMode) -> Self {
+    @discardableResult public func setLineBreakMode(_ mode: NSLineBreakMode) -> Self {
         lineBreakMode = mode
         return self
     }
     
-    @discardableResult func setLineSpacing(_ spacing: CGFloat) -> Self {
+    @discardableResult public func setLineSpacing(_ spacing: CGFloat) -> Self {
         let style = NSMutableParagraphStyle()
         style.lineSpacing = spacing
         style.alignment = textAlignment

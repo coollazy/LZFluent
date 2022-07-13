@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 extension UINavigationBar {
-    @discardableResult func setTranslucent(_ translucent: Bool) -> Self {
+    @discardableResult public func setTranslucent(_ translucent: Bool) -> Self {
         if #available(iOS 13, *) {
             if translucent {
                 standardAppearance.configureWithTransparentBackground()
@@ -16,7 +16,7 @@ extension UINavigationBar {
         return self
     }
     
-    @discardableResult func setTitleColor(_ color: UIColor) -> Self {
+    @discardableResult public func setTitleColor(_ color: UIColor) -> Self {
         if #available(iOS 13, *) {
             standardAppearance.titleTextAttributes.updateValue(color, forKey: NSAttributedString.Key.foregroundColor)
             standardAppearance.buttonAppearance.normal.titleTextAttributes.updateValue(color, forKey: NSAttributedString.Key.foregroundColor)
@@ -27,7 +27,7 @@ extension UINavigationBar {
         return self
     }
     
-    @discardableResult func setTitleFontSize(_ size: CGFloat) -> Self {
+    @discardableResult public func setTitleFontSize(_ size: CGFloat) -> Self {
         var newFont = UIFont.systemFont(ofSize: size)
         if #available(iOS 13, *) {
             if let originalFont = standardAppearance.titleTextAttributes[NSAttributedString.Key.font] as? UIFont {
@@ -47,7 +47,7 @@ extension UINavigationBar {
         return self
     }
     
-    @discardableResult func setTitleFontWeight(_ weight: UIFont.Weight) -> Self {
+    @discardableResult public func setTitleFontWeight(_ weight: UIFont.Weight) -> Self {
         var newFont = UIFont.systemFont(ofSize: 17, weight: weight)
         if #available(iOS 13, *) {
             if let originalFont = standardAppearance.titleTextAttributes[NSAttributedString.Key.font] as? UIFont {
@@ -67,7 +67,7 @@ extension UINavigationBar {
         return self
     }
     
-    @discardableResult func setBarBackgroundColor(_ color: UIColor) -> Self {
+    @discardableResult public func setBarBackgroundColor(_ color: UIColor) -> Self {
         if #available(iOS 13, *) {
             standardAppearance.backgroundColor = color
             scrollEdgeAppearance = standardAppearance
