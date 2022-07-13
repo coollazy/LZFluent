@@ -71,8 +71,28 @@ extension UIView {
         return self
     }
     
-    @discardableResult public func setBorderWidth(_ width: CGFloat) -> Self {
-        layer.borderWidth = width
+    @discardableResult public func setBorderWidth(_ width: Float) -> Self {
+        layer.borderWidth = CGFloat(width)
+        return self
+    }
+    
+    @discardableResult public func setShadowColor(_ color: UIColor) -> Self {
+        layer.shadowColor = color.cgColor
+        return self
+    }
+    
+    @discardableResult public func setShadowOpacity(_ opacity: Float) -> Self {
+        layer.shadowOpacity = opacity
+        return self
+    }
+    
+    @discardableResult public func setShadowRadius(_ radius: Float) -> Self {
+        layer.shadowRadius = CGFloat(radius)
+        return self
+    }
+    
+    @discardableResult public func setShadowOffset(_ size: CGSize) -> Self {
+        layer.shadowOffset = size
         return self
     }
 }

@@ -30,4 +30,9 @@ extension UIButton {
         semanticContentAttribute = attribute
         return self
     }
+    
+    @discardableResult public func setImageEdgeInsets(_ edgeInsets: UIEdgeInsets) -> Self {
+        imageEdgeInsets = edgeInsets
+        return self
+    }
 }
