@@ -21,7 +21,7 @@ extension UITextField {
         return self
     }
     
-    @discardableResult func setFontWeight(_ weight: UIFont.Weight) -> Self {
+    @discardableResult public func setFontWeight(_ weight: UIFont.Weight) -> Self {
         let fontSize = font?.pointSize ?? 12
         font = UIFont.systemFont(ofSize: fontSize, weight: weight)
         return self
