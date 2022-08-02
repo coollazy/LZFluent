@@ -16,8 +16,13 @@ extension UILabel {
         return self
     }
     
+    @discardableResult public func setFontName(_ name: String) -> Self {
+        font = UIFont(name: name, size: font.pointSize)
+        return self
+    }
+    
     @discardableResult public func setFontSize(_ size: CGFloat) -> Self {
-        font = UIFont.systemFont(ofSize: size)
+        font = font.withSize(size)
         return self
     }
     
