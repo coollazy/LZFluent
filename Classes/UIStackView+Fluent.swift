@@ -1,27 +1,32 @@
 import UIKit
 
 extension UIStackView {
-    @discardableResult public func appendArrangedSubview(_ arrangedSubview: UIView) -> Self {
+    @discardableResult
+    public func appendArrangedSubview(_ arrangedSubview: UIView) -> Self {
         addArrangedSubview(arrangedSubview)
         return self
     }
     
-    @discardableResult public func setAxis(_ axis: NSLayoutConstraint.Axis) -> Self {
+    @discardableResult
+    public func setAxis(_ axis: NSLayoutConstraint.Axis) -> Self {
         self.axis = axis
         return self
     }
     
-    @discardableResult public func setAlignment(_ alignment: UIStackView.Alignment) -> Self {
+    @discardableResult
+    public func setAlignment(_ alignment: UIStackView.Alignment) -> Self {
         self.alignment = alignment
         return self
     }
     
-    @discardableResult public func setDistribution(_ distribution: UIStackView.Distribution) -> Self {
+    @discardableResult
+    public func setDistribution(_ distribution: UIStackView.Distribution) -> Self {
         self.distribution = distribution
         return self
     }
     
-    @discardableResult public func setSpacing(_ spacing: CGFloat) -> Self {
+    @discardableResult
+    public func setSpacing(_ spacing: CGFloat) -> Self {
         self.spacing = spacing
         return self
     }
