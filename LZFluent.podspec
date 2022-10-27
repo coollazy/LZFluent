@@ -6,10 +6,10 @@ Pod::Spec.new do |s|
                    The extensions of fluent interface for UIKit.
                    DESC
 
-  s.homepage     = "https://gitlab.com/LZLibs/LZFluent"
+  s.homepage     = "https://github.com/venwu1984/LZFluent.git"
   s.license      = "MIT"
-  s.author       = { "ven.wu" => "ven.wu1984@gamil.com" }
+  s.author       = { "ven.wu" => "ven.wu.github@gamil.com" }
   s.platform     = :ios, "10.0"
-  s.source       = { :git => "git@gitlab.com:LZLibs/LZFluent.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/venwu1984/LZFluent.git", :tag => s.version }
   s.source_files = "Classes/**/*.{swift}"
 end
