@@ -10,7 +10,9 @@ extension UITabBar {
             } else {
                 standardAppearance.configureWithOpaqueBackground()
             }
+#if swift(>=5.5)
             scrollEdgeAppearance = standardAppearance
+#endif
         } else {
             isTranslucent = translucent
         }
@@ -23,7 +25,9 @@ extension UITabBar {
             updateTabBarItemAppearance(standardAppearance.compactInlineLayoutAppearance, selectedColor: selectedColor, unselectedColor: unselectedColor)
             updateTabBarItemAppearance(standardAppearance.inlineLayoutAppearance, selectedColor: selectedColor, unselectedColor: unselectedColor)
             updateTabBarItemAppearance(standardAppearance.stackedLayoutAppearance, selectedColor: selectedColor, unselectedColor: unselectedColor)
+#if swift(>=5.5)
             scrollEdgeAppearance = standardAppearance
+#endif
         } else {
             tintColor = selectedColor
         }
@@ -42,7 +46,9 @@ extension UITabBar {
     public func setBarBackgroundColor(_ color: UIColor) -> Self {
         if #available(iOS 15, *) {
             standardAppearance.backgroundColor = color
+#if swift(>=5.5)
             scrollEdgeAppearance = standardAppearance
+#endif
         } else {
             barTintColor = color
         }
@@ -54,6 +60,7 @@ extension UITabBar {
     @discardableResult
     public static func setTranslucent(_ translucent: Bool) -> UITabBar.Type {
         if #available(iOS 15, *) {
+#if swift(>=5.5)
             let scrollEdgeAppearance = appearance().scrollEdgeAppearance ?? UITabBarAppearance()
             if translucent {
                 scrollEdgeAppearance.configureWithTransparentBackground()
@@ -63,6 +70,7 @@ extension UITabBar {
             
             appearance().standardAppearance = scrollEdgeAppearance
             appearance().scrollEdgeAppearance = scrollEdgeAppearance
+#endif
         } else {
             appearance().isTranslucent = translucent
         }
@@ -72,6 +80,7 @@ extension UITabBar {
     @discardableResult
     public static func setBarItemSelectedColor(_ selectedColor: UIColor, unselectedColor: UIColor = .lightGray) -> UITabBar.Type {
         if #available(iOS 15, *) {
+#if swift(>=5.5)
             let scrollEdgeAppearance = appearance().scrollEdgeAppearance ?? UITabBarAppearance()
             scrollEdgeAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: selectedColor]
             scrollEdgeAppearance.stackedLayoutAppearance.selected.iconColor = selectedColor
@@ -80,6 +89,7 @@ extension UITabBar {
             
             appearance().standardAppearance = scrollEdgeAppearance
             appearance().scrollEdgeAppearance = scrollEdgeAppearance
+#endif
         }
         else {
             UITabBar.appearance().barTintColor = selectedColor
@@ -90,11 +100,13 @@ extension UITabBar {
     @discardableResult
     public static func setBarBackgroundColor(_ color: UIColor) -> UITabBar.Type {
         if #available(iOS 15, *) {
+#if swift(>=5.5)
             let scrollEdgeAppearance = appearance().scrollEdgeAppearance ?? UITabBarAppearance()
             scrollEdgeAppearance.backgroundColor = color
             
             appearance().standardAppearance = scrollEdgeAppearance
             appearance().scrollEdgeAppearance = scrollEdgeAppearance
+#endif
         }
         else {
             UITabBar.appearance().tintColor = color
