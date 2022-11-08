@@ -114,6 +114,9 @@ extension UINavigationBar {
             appearance().scrollEdgeAppearance = scrollEdgeAppearance
         }
         else {
+            if appearance().titleTextAttributes == nil {
+                appearance().titleTextAttributes = [:]
+            }
             appearance().titleTextAttributes?.updateValue(color, forKey: .foregroundColor)
         }
         appearance().tintColor = color

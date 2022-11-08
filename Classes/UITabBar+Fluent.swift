@@ -92,7 +92,7 @@ extension UITabBar {
 #endif
         }
         else {
-            UITabBar.appearance().barTintColor = selectedColor
+            UITabBar.appearance().tintColor = selectedColor
         }
         return self
     }
@@ -109,7 +109,7 @@ extension UITabBar {
 #endif
         }
         else {
-            UITabBar.appearance().tintColor = color
+            UITabBar.appearance().barTintColor = color
         }
         return self
     }
