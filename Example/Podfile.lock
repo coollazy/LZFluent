@@ -1,5 +1,5 @@
 PODS:
-  - LZFluent (1.0.0)
+  - LZFluent (1.0.2)
 
 DEPENDENCIES:
   - LZFluent (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LZFluent: a7857f5355abcee222d1198ba8b0e8a98a62c36b
+  LZFluent: 8843a1833e1ec1c5c25c8d3375f64e05a9997d39
 
 PODFILE CHECKSUM: aba08821406f563f6345baf5737afc5339d386e5
 
