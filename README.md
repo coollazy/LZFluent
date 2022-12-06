@@ -4,7 +4,7 @@ The extensions of fluent interface for UIKit
 
 # How to install
 
-### cocoapod
+### CocoaPods
 
 ```
 pod 'LZFluent', '~> 1.0.3'
