@@ -60,4 +60,10 @@ extension UITableView {
         allowsMultipleSelectionDuringEditing = allow
         return self
     }
+    
+    @discardableResult
+    public func setDelegate(_ delegate: UITableViewDelegate?) -> Self {
+        self.delegate = delegate
+        return self
+    }
 }
