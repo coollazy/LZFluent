@@ -120,4 +120,10 @@ extension UIView {
         translatesAutoresizingMaskIntoConstraints = enabled
         return self
     }
+    
+    @discardableResult
+    public func setSemanticContentAttribute(_ attribute: UISemanticContentAttribute) -> Self {
+        semanticContentAttribute = attribute
+        return self
+    }
 }
