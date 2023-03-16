@@ -20,6 +20,12 @@ extension UILabel {
     }
     
     @discardableResult
+    public func setFont(_ font: UIFont?) -> Self {
+        self.font = font
+        return self
+    }
+    
+    @discardableResult
     public func setFontName(_ name: String) -> Self {
         font = UIFont(name: name, size: font.pointSize)
         return self

@@ -20,6 +20,12 @@ extension UITextField {
     }
     
     @discardableResult
+    public func setFont(_ font: UIFont?) -> Self {
+        self.font = font
+        return self
+    }
+    
+    @discardableResult
     public func setFontSize(_ ofSize: CGFloat) -> Self {
         font = UIFont.systemFont(ofSize: ofSize)
         return self

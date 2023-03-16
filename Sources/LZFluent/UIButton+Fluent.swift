@@ -14,6 +14,12 @@ extension UIButton {
     }
     
     @discardableResult
+    public func setFont(_ font: UIFont?) -> Self {
+        titleLabel?.setFont(font)
+        return self
+    }
+    
+    @discardableResult
     public func setFontSize(_ size: CGFloat) -> Self {
         titleLabel?.setFontSize(size)
         return self
