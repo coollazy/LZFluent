@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = "LZFluent"
-  s.version       = "1.0.5"
+  s.version       = "1.0.6"
   s.swift_version = "5.0.0"
   s.summary       = "LZFluent"
   s.description   = <<-DESC
