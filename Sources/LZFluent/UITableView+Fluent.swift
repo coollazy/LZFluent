@@ -62,6 +62,12 @@ extension UITableView {
     }
     
     @discardableResult
+    public func setDataSource(_ dataSource: UITableViewDataSource?) -> Self {
+        self.dataSource = dataSource
+        return self
+    }
+    
+    @discardableResult
     public func setDelegate(_ delegate: UITableViewDelegate?) -> Self {
         self.delegate = delegate
         return self

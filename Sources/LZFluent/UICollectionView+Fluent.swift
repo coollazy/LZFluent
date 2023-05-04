@@ -38,6 +38,12 @@ extension UICollectionView {
     }
     
     @discardableResult
+    public func setDataSource(_ dataSource: UICollectionViewDataSource?) -> Self {
+        self.dataSource = dataSource
+        return self
+    }
+    
+    @discardableResult
     public func setDelegate(_ delegate: UICollectionViewDelegate?) -> Self {
         self.delegate = delegate
         return self
