@@ -42,4 +42,10 @@ extension UIButton {
         imageEdgeInsets = edgeInsets
         return self
     }
+    
+    @discardableResult
+    public func setContentEdgeInsets(_ edgeInsets: UIEdgeInsets) -> Self {
+        contentEdgeInsets = edgeInsets
+        return self
+    }
 }
