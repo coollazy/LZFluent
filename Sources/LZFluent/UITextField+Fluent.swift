@@ -79,4 +79,28 @@ extension UITextField {
         borderStyle = style
         return self
     }
+    
+    @discardableResult
+    public func setLeftView(_ view: UIView?) -> Self {
+        leftView = view
+        return self
+    }
+    
+    @discardableResult
+    public func setLeftViewMode(_ mode: UITextField.ViewMode) -> Self {
+        leftViewMode = mode
+        return self
+    }
+    
+    @discardableResult
+    public func setRightView(_ view: UIView?) -> Self {
+        rightView = view
+        return self
+    }
+    
+    @discardableResult
+    public func setRightViewMode(_ mode: UITextField.ViewMode) -> Self {
+        rightViewMode = mode
+        return self
+    }
 }
