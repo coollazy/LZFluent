@@ -35,6 +35,8 @@ let button = UIButton()
 	.setFontSize(17)
 	.setFontWeight(.bold)
 	.setImage(UIImage(systemName: "icon name"))
+	.setImageEdgeInsets(.init(top: 0, left: 0, bottom: 0, right: 0))
+	.setContentEdgeInsets(.init(top: 0, left: 0, bottom: 0, right: 0))
 ```
 
 ### UIImageView
@@ -119,6 +121,8 @@ let tableView = UITableView()
 	.setAllowsSelectionDuringEditing(true)
 	.setAllowsMultipleSelection(true)
 	.setAllowsMultipleSelectionDuringEditing(true)
+    .setDataSource(self)
+    .setDelegate(self)
 ```
 
 ### UITextField
@@ -138,6 +142,12 @@ let textField = UITextField()
 	.setIsSecureTextEntry(true)
 	.setKeyboardType(.default)
 	.setBorderStyle(.none)
+	.setLeftView(UIView())
+	.setLeftViewMode(. never)
+	.setRightView(UIView())
+	.setRightViewMode(.never)
+	.setAttributedPlaceholder(NSAttributedString())
+	.setDelegate(self)
 ```
 
 ### UIView
