@@ -109,4 +109,10 @@ extension UITextField {
         rightViewMode = mode
         return self
     }
+    
+    @discardableResult
+    public func setDelegate(_ delegate: UITextFieldDelegate) -> Self {
+        self.delegate = delegate
+        return self
+    }
 }
