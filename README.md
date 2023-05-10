@@ -7,7 +7,7 @@ The extensions of fluent interface for UIKit
 ### CocoaPods
 
 ```
-pod 'LZFluent', '~> 1.0.6'
+pod 'LZFluent', '~> 1.0.7'
 ```
 
 ### SPM
@@ -15,7 +15,7 @@ pod 'LZFluent', '~> 1.0.6'
 - Package.swift 的 dependencies 增加
 
 ```
-.package(name: "LZFluent", url: "https://github.com/coollazy/LZFluent", .upToNextMajor(from: "1.0.6")),
+.package(name: "LZFluent", url: "https://github.com/coollazy/LZFluent", .upToNextMajor(from: "1.0.7")),
 ```
 
 - target 的 dependencies 增加
