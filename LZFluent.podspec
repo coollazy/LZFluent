@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.homepage      = "https://github.com/coollazy/LZFluent.git"
   s.license       = "MIT"
-  s.author        = { "ven.wu" => "ven.wu.github@gamil.com" }
+  s.author        = { "ven.wu" => "ven.wu.github@gmail.com" }
   s.platform      = :ios, "10.0"
   s.source        = { :git => "https://github.com/coollazy/LZFluent.git", :tag => s.version }
   s.source_files  = "Sources/LZFluent/**/*.{swift}"
