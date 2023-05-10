@@ -14,6 +14,12 @@ extension UITextField {
     }
     
     @discardableResult
+    public func setAttributedPlaceholder(_ attribute: NSAttributedString?) -> Self {
+        attributedPlaceholder = attribute
+        return self
+    }
+    
+    @discardableResult
     public func setTextColor(_ color: UIColor) -> Self {
         textColor = color
         return self
