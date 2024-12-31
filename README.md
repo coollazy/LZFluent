@@ -9,7 +9,7 @@ The extensions of fluent interface for UIKit
 - Package.swift 的 dependencies 增加
 
 ```
-.package(name: "LZFluent", url: "https://github.com/coollazy/LZFluent", .upToNextMajor(from: "2.0.0")),
+.package(name: "LZFluent", url: "https://github.com/coollazy/LZFluent", .upToNextMajor(from: "2.0.1")),
 ```
 
 - target 的 dependencies 增加
