@@ -4,12 +4,6 @@ The extensions of fluent interface for UIKit
 
 # How to install
 
-### CocoaPods
-
-```
-pod 'LZFluent', '~> 1.0.7'
-```
-
 ### SPM
 
 - Package.swift 的 dependencies 增加

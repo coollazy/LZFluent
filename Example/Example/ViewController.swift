@@ -1,11 +1,5 @@
-//
-//  ViewController.swift
-//  LZFluent
-//
-//  Created by User on 2022/7/8.
-//
-
 import UIKit
+import LZFluent
 
 class ViewController: UIViewController {
 
