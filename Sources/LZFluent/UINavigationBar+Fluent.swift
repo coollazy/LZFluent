@@ -188,4 +188,40 @@ extension UINavigationBar {
         }
         return self
     }
+    
+    @discardableResult
+    static public func setBackTitleHidden() -> UINavigationBar.Type {
+        if #available(iOS 15.0, *) {
+            let scrollEdgeAppearance = appearance().scrollEdgeAppearance ?? UINavigationBarAppearance()
+            
+            let backItemAppearance = scrollEdgeAppearance.backButtonAppearance
+            backItemAppearance.normal.titleTextAttributes.updateValue(UIColor.clear, forKey: .foregroundColor)
+            backItemAppearance.highlighted.titleTextAttributes.updateValue(UIColor.clear, forKey: .foregroundColor)
+            
+            scrollEdgeAppearance.backButtonAppearance = backItemAppearance
+            
+            appearance().standardAppearance = scrollEdgeAppearance
+            appearance().scrollEdgeAppearance = scrollEdgeAppearance
+        }
+        else {
+            // TODO: 要補上
+        }
+        return self
+    }
+    
+    @discardableResult
+    static public func setBackIndicatorImage(_ image: UIImage?, tintColor: UIColor? = nil) -> UINavigationBar.Type {
+        if #available(iOS 15.0, *) {
+            let scrollEdgeAppearance = appearance().scrollEdgeAppearance ?? UINavigationBarAppearance()
+            scrollEdgeAppearance.setBackIndicatorImage(image, transitionMaskImage: image)
+
+            appearance().standardAppearance = scrollEdgeAppearance
+            appearance().scrollEdgeAppearance = scrollEdgeAppearance
+        }
+        else {
+            appearance().backIndicatorImage = image
+            appearance().backIndicatorTransitionMaskImage = image
+        }
+        return self
+    }
 }
