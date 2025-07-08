@@ -8,6 +8,12 @@ extension UIStackView {
     }
     
     @discardableResult
+    public func appendArrangedSubviews(_ arrangedSubviews: [UIView]) -> Self {
+        arrangedSubviews.forEach { addArrangedSubview($0) }
+        return self
+    }
+    
+    @discardableResult
     public func setAxis(_ axis: NSLayoutConstraint.Axis) -> Self {
         self.axis = axis
         return self
