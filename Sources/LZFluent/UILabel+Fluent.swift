@@ -84,4 +84,16 @@ extension UILabel {
         
         return self
     }
+    
+    @discardableResult
+    public func setAdjustsFontSizeToFitWidth(_ adjustsFontSizeToFitWidth: Bool) -> Self {
+        self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
+        return self
+    }
+    
+    @discardableResult
+    public func setMinimumScaleFactor(_ minimumScaleFactor: CGFloat) -> Self {
+        self.minimumScaleFactor = minimumScaleFactor
+        return self
+    }
 }
